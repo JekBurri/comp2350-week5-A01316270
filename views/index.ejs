@@ -12,20 +12,22 @@
 					<div class="title">
 						To do list
 					</div>
-					<% if (locals.allTodos) { %>
+					<% if (locals.allUsers) { %>
 						<div class="table-container">
 						<table class="table is-bordered is-hoverable is-striped is-narrow">
 							<thead>
 							<tr>
-								<th> # </th>
-								<th> Todo </th>
+								<th> first_name </th>
+								<th> last_name </th>
+								<th> email </th>
 							</tr>
 							</thead>
 							<% let i=0; %>
-							<% for(i=0; i < allTodos.length; i++) { %>
+							<% for(i=0; i < allUsers.length; i++) { %>
 							<tr>
-								<td><%= allTodos[i].todo_id %></td>
-								<td><%= allTodos[i].todo_name %></td>
+								<td><%= allUsers[i].first_name %></td>
+								<td><%= allUsers[i].last_name %></td>
+								<td><%= allUsers[i].email %></td>
 							</tr>
 							<% } %>
 							<tfoot>
